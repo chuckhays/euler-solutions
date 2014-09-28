@@ -13,6 +13,9 @@ public class Program {
 			case "1":
 				problem = new Problem1();
 				break;
+			case "2":
+				problem = new Problem2();
+				break;
 
 
 			default:
