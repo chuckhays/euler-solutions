@@ -1,19 +1,36 @@
 #include <iostream>
-
+bool isPrime(long n)
+{
+	for(long i = 2; i < n/2; ++i)
+	{
+		if (n % i == 0)
+		{
+			return false;
+		}
+	}
+	return true;
+}
 int main() {
 
-	long sumOfSquares = 0;
-	long sum = 0;
 
+	int target = 10001;
+	int current = 0;
+	int currentPrime = 0;
 
-	for(int i = 1; i <= 100; ++i)
+	int i = 2;
+	while (current <= target)
 	{
-		sum += i;
-		sumOfSquares += i * i;
+		if (isPrime(i))
+		{
+			++current;
+			currentPrime = i;
+		}
 
+		++i;
 	}
-	
-	std::cout << (sum * sum - sumOfSquares) << "\r\n";
+
+
+	std::cout << currentPrime << "\r\n";
 
 	return(0);
 }

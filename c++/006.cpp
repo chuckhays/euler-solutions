@@ -2,25 +2,18 @@
 
 int main() {
 
+	long sumOfSquares = 0;
+	long sum = 0;
 
-	for(int i = 20*19;true;++i)
+
+	for(int i = 1; i <= 100; ++i)
 	{
-		bool divisible = true;
-		for(int j = 2; j <= 20; ++j)
-		{
-			if (i % j != 0)
-			{
-				divisible = false;
-				break;
-			}
-		}
-		if (divisible)
-		{
-			std::cout << i << "\r\n";
-			return(0);
-		}
-	}
+		sum += i;
+		sumOfSquares += i * i;
 
+	}
+	
+	std::cout << (sum * sum - sumOfSquares) << "\r\n";
 
 	return(0);
 }
