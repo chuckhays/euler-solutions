@@ -46,6 +46,9 @@ public class Program {
 			case "12":
 				problem = new Problem12();
 				break;
+			case "13":
+				problem = new Problem13();
+				break;
 
 
 			default:
